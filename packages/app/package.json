@@ -1,0 +1,13 @@
+{
+    "name": "app",
+    "version": "",
+    "main": "dist/app.js",
+    "repository": "npm",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "starfall-vue-components-sub": ""
+    },
+    "devDependencies": {}
+}

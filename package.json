@@ -1,0 +1,20 @@
+{
+    "name": "starfall-vue-components",
+    "description": "starfall-vue-components",
+    "version": "1.0.0",
+    "main": "",
+    "scripts": {},
+    "dependencies": {
+        "axios": "^0.21.1",
+        "vue": "^2.6.14"
+    },
+    "devDependencies": {
+        "eslint": "^7.30.0",
+        "eslint-plugin-chain": "^1.0.4",
+        "eslint-plugin-sonarjs": "^0.9.1",
+        "eslint-plugin-vue": "^7.12.1",
+        "stylelint": "^13.13.1",
+        "stylelint-config-recommended": "^5.0.0",
+        "stylelint-config-standard": "^22.0.0"
+    }
+}

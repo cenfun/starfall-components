@@ -1,0 +1,10 @@
+{
+    "name": "starfall-vue-components-core",
+    "version": "",
+    "main": "dist/starfall-vue-components-core.js",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "vue": "^2.6.14"
+    },
+    "devDependencies": {}
+}
