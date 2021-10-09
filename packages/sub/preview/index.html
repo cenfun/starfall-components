@@ -59,18 +59,10 @@
         <div class="preview-container"></div>
     </div>
     <script>
-        /*inject:start*/
-        var inject_list = [
-            "../../../node_modules/axios/dist/axios.min.js",
-            "../../../node_modules/vue/dist/vue.min.js",
-            "../../../node_modules/starfall-vue-components-core/dist/starfall-vue-components-core.js",
-            "../dist/starfall-vue-components-sub.js"
-        ];
-        /*inject:end*/
-        new Vue({
-            el: ".preview-container",
+        new window.Vue({
+            el: '.preview-container',
             render: (h) => {
-                return h(window["starfall-vue-components-sub"].default);
+                return h(window['starfall-vue-components-sub'].default);
             }
         });
     </script>
