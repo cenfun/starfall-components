@@ -18,11 +18,11 @@
 </template>
 <script>
 export default {
-    name: "StarfallVueComponentsSub",
+    name: 'StarfallVueComponentsSub',
     data() {
         return {
             value: 0,
-            name: "starfall-vue-components-sub"
+            name: 'starfall-vue-components-sub'
         };
     },
     methods: {
