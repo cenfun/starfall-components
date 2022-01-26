@@ -1,8 +1,7 @@
 {
-    "name": "app",
-    "version": "",
-    "main": "dist/app.js",
-    "repository": "npm",
+    "name": "starfall-vue-components-app",
+    "version": "1.0.0",
+    "main": "dist/starfall-vue-components-app.js",
     "files": [
         "dist"
     ],
