@@ -8,7 +8,7 @@ import {
 import { html } from 'lit';
 import { reactive } from '@vue/reactivity';
 
-defineComponent('my-component', () => {
+defineComponent('my-component', ['style'], (props) => {
     const state = reactive({
         text: 'hello',
         show: true
@@ -20,16 +20,17 @@ defineComponent('my-component', () => {
         state.text = e.target.value;
     };
 
-    const child = html`<my-child msg=${state.text}></my-child>`;
+    const child = html`<my-child msg=${state.text} style="display:block;background:#ccc;padding:10px;"></my-child>`;
 
-    return () => html`
-      <button @click=${toggle}>toggle child</button>
-      <div>${state.text} <input value=${state.text} @input=${onInput}></div>
-      ${state.show ? child : ''}
+    return () => html`<div style="${props.style}">
+        <button @click=${toggle}>toggle child</button>
+        <div>${state.text} <input value=${state.text} @input=${onInput}></div>
+        ${state.show ? child : ''}
+      </div>
     `;
 });
 
-defineComponent('my-child', ['msg'], (props) => {
+defineComponent('my-child', ['msg', 'style'], (props) => {
     const state = reactive({
         count: 0
     });
@@ -50,7 +51,8 @@ defineComponent('my-child', ['msg'], (props) => {
     });
 
     return () => html`
-      <div>${props.msg} ${state.count}</div>
-      <button @click=${increase}>increase</button>
+        <div style="${props.style}">${props.msg} ${state.count}
+            <button @click=${increase}>increase</button>
+        </div>
     `;
 });
