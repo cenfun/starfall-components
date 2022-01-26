@@ -5,16 +5,18 @@
     "main": "",
     "scripts": {},
     "dependencies": {
-        "axios": "^0.24.0",
+        "axios": "^0.25.0",
         "vue": "^2.6.14"
     },
     "devDependencies": {
-        "eslint": "^8.4.0",
-        "eslint-plugin-chain": "^1.0.4",
+        "@vue/reactivity": "^3.2.29",
+        "eslint": "^8.7.0",
+        "eslint-plugin-chain": "^2.0.0",
         "eslint-plugin-html": "^6.2.0",
         "eslint-plugin-sonarjs": "^0.11.0",
-        "eslint-plugin-vue": "^8.1.1",
-        "stylelint": "^14.1.0",
+        "eslint-plugin-vue": "^8.3.0",
+        "lit": "^2.1.2",
+        "stylelint": "^14.3.0",
         "stylelint-config-recommended": "^6.0.0",
         "stylelint-config-standard": "^24.0.0"
     }
