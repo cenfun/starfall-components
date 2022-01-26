@@ -20,14 +20,17 @@ defineComponent('my-component', ['style'], (props) => {
         state.text = e.target.value;
     };
 
-    const child = html`<my-child msg=${state.text} style="display:block;background:#ccc;padding:10px;"></my-child>`;
+    return () => {
 
-    return () => html`<div style="${props.style}">
-        <button @click=${toggle}>toggle child</button>
-        <div>${state.text} <input value=${state.text} @input=${onInput}></div>
-        ${state.show ? child : ''}
-      </div>
-    `;
+        const child = html`<my-child msg=${state.text} style="display:block;background:#ccc;padding:10px;"></my-child>`;
+
+        return html`<div style="${props.style}">
+            <button @click=${toggle}>toggle child</button>
+            <div>${state.text} <input value=${state.text} @input=${onInput}></div>
+            ${state.show ? child : ''}
+        </div>
+        `;
+    };
 });
 
 defineComponent('my-child', ['msg', 'style'], (props) => {
