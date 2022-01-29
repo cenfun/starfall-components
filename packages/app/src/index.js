@@ -1,4 +1,4 @@
-import Sub from 'starfall-vue-components-sub';
+import Sub from 'starfall-components-sub';
 window.addEventListener('load', function() {
     Sub.create({}, '.preview-container');
 });

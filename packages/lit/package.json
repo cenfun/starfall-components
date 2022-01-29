@@ -1,12 +1,12 @@
 {
-    "name": "starfall-vue-components-lit",
+    "name": "starfall-components-lit",
     "version": "1.0.0",
-    "main": "dist/starfall-vue-components-lit.js",
+    "main": "dist/starfall-components-lit.js",
     "files": [
         "dist"
     ],
     "dependencies": {
-        "starfall-vue-components-core": ""
+        "starfall-components-core": ""
     },
     "devDependencies": {
         "@vue/reactivity": "^3.2.29",

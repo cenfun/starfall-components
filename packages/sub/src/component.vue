@@ -1,12 +1,12 @@
 <template>
-  <div class="starfall-vue-components-sub">
-    <div class="starfall-vue-components-sub-title">
+  <div class="starfall-components-sub">
+    <div class="starfall-components-sub-title">
       <p>{{ name }}</p>
     </div>
-    <div class="starfall-vue-components-sub-content">
+    <div class="starfall-components-sub-content">
       {{ value }}
     </div>
-    <div class="starfall-vue-components-sub-action">
+    <div class="starfall-components-sub-action">
       <button @click="increment">
         increment+
       </button>
@@ -22,7 +22,7 @@ export default {
     data() {
         return {
             value: 0,
-            name: 'starfall-vue-components-sub'
+            name: 'starfall-components-sub'
         };
     },
     methods: {
@@ -36,23 +36,23 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-.starfall-vue-components-sub {
+.starfall-components-sub {
     width: 300px;
     margin: auto;
     text-align: center;
 
-    .starfall-vue-components-sub-title {
+    .starfall-components-sub-title {
         font-size: 30px;
     }
 
-    .starfall-vue-components-sub-content {
+    .starfall-components-sub-content {
         padding: 10px 10px;
         color: red;
         font-size: 20px;
         font-weight: bold;
     }
 
-    .starfall-vue-components-sub-action {
+    .starfall-components-sub-action {
         button {
             padding: 5px 5px;
         }

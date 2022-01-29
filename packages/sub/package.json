@@ -1,12 +1,12 @@
 {
-    "name": "starfall-vue-components-sub",
+    "name": "starfall-components-sub",
     "version": "1.0.0",
-    "main": "dist/starfall-vue-components-sub.js",
+    "main": "dist/starfall-components-sub.js",
     "files": [
         "dist"
     ],
     "dependencies": {
-        "starfall-vue-components-core": ""
+        "starfall-components-core": ""
     },
     "devDependencies": {}
 }
