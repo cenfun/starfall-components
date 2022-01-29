@@ -6,7 +6,8 @@
         "dist"
     ],
     "dependencies": {
-        "starfall-components-core": ""
+        "starfall-components-core": "",
+        "starfall-components-lit": ""
     },
     "devDependencies": {}
 }

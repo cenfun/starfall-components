@@ -28,7 +28,7 @@ effect(() => {
 });
 
 
-defineComponent('my-component', ['style'], (props) => {
+defineComponent('lit-component', ['style'], (props) => {
     
     const toggle = () => {
         state.data.show = !state.data.show;
@@ -40,7 +40,7 @@ defineComponent('my-component', ['style'], (props) => {
 
     return () => {
 
-        const child = html`<my-child msg=${state.data.text} style="display:block;background:#ccc;padding:10px;"></my-child>`;
+        const child = html`<lit-child msg=${state.data.text} style="display:block;background:#ccc;padding:10px;"></lit-child>`;
 
         return html`<div style="${props.style}">
                 <button @click=${toggle}>toggle child</button>
@@ -56,7 +56,7 @@ defineComponent('my-component', ['style'], (props) => {
     };
 });
 
-defineComponent('my-child', ['msg', 'style'], (props) => {
+defineComponent('lit-child', ['msg', 'style'], (props) => {
 
     const increase = () => {
         state.data.count++;

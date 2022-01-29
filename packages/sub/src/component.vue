@@ -14,6 +14,7 @@
         decrement-
       </button>
     </div>
+    <lit-component style="display: block; background: gray; padding: 10px; margin: 10px;" />
   </div>
 </template>
 <script>
