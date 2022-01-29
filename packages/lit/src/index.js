@@ -6,39 +6,60 @@ import {
 } from './vue-lit.js';
 
 import { html } from 'lit';
-import { reactive } from '@vue/reactivity';
+import {
+    effect, reactive, isReactive
+} from '@vue/reactivity';
+
+const state = reactive({
+    value: 'hello',
+    data: {
+        text: 'hello',
+        show: true,
+        count: 0
+    }
+});
+
+console.log('state', isReactive(state));
+console.log('state.data', isReactive(state.data));
+
+let someValue;
+effect(() => {
+    someValue = state.value;
+});
+
 
 defineComponent('my-component', ['style'], (props) => {
-    const state = reactive({
-        text: 'hello',
-        show: true
-    });
+    
     const toggle = () => {
-        state.show = !state.show;
+        state.data.show = !state.data.show;
     };
     const onInput = e => {
-        state.text = e.target.value;
+        state.data.text = e.target.value;
+        state.value = state.data.text;
     };
 
     return () => {
 
-        const child = html`<my-child msg=${state.text} style="display:block;background:#ccc;padding:10px;"></my-child>`;
+        const child = html`<my-child msg=${state.data.text} style="display:block;background:#ccc;padding:10px;"></my-child>`;
 
         return html`<div style="${props.style}">
-            <button @click=${toggle}>toggle child</button>
-            <div>${state.text} <input value=${state.text} @input=${onInput}></div>
-            ${state.show ? child : ''}
-        </div>
+                <button @click=${toggle}>toggle child</button>
+                <div>${state.data.text}</div>
+                <div>${state.value}</div>
+                <div>${someValue}</div>
+                <div>
+                    <input type="text" value=${state.data.text} @input=${onInput} />
+                </div>
+                ${state.data.show ? child : ''}
+            </div>
         `;
     };
 });
 
 defineComponent('my-child', ['msg', 'style'], (props) => {
-    const state = reactive({
-        count: 0
-    });
+
     const increase = () => {
-        state.count++;
+        state.data.count++;
     };
 
     onMounted(() => {
@@ -54,7 +75,7 @@ defineComponent('my-child', ['msg', 'style'], (props) => {
     });
 
     return () => html`
-        <div style="${props.style}">${props.msg} ${state.count}
+        <div style="${props.style}">${props.msg} ${state.data.count}
             <button @click=${increase}>increase</button>
         </div>
     `;
