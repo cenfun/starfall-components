@@ -11,7 +11,7 @@ const Util = {
     },
 
     isNum: (num) => {
-        if (typeof(num) !== 'number' || isNaN(num)) {
+        if (typeof (num) !== 'number' || isNaN(num)) {
             return false;
         }
         const isInvalid = function(n) {
@@ -28,7 +28,7 @@ const Util = {
     },
 
     toNum: (num, toInt) => {
-        if (typeof(num) !== 'number') {
+        if (typeof (num) !== 'number') {
             num = parseFloat(num);
         }
         if (isNaN(num)) {
@@ -57,7 +57,7 @@ const Util = {
         return pre + str;
     },
 
-    isList: data => {
+    isList: (data) => {
         if (data && data instanceof Array && data.length > 0) {
             return true;
         }
@@ -72,14 +72,19 @@ const Util = {
         });
     },
 
+    hasOwn: function(obj, key) {
+        return Object.prototype.hasOwnProperty.call(obj, key);
+    },
+
+
     replace: (str, obj, defaultValue) => {
         if (typeof str !== 'string' || !obj) {
             return str;
         }
         str = str.replace(/\{([^}]+)\}/g, function(match, key) {
 
-            if (!obj.hasOwnProperty(key)) {
-                if (typeof(defaultValue) !== 'undefined') {
+            if (!Util.hasOwn(obj, key)) {
+                if (typeof (defaultValue) !== 'undefined') {
                     return defaultValue;
                 }
                 return match;
@@ -87,11 +92,11 @@ const Util = {
 
             let val = obj[key];
 
-            if (typeof(val) === 'function') {
+            if (typeof (val) === 'function') {
                 val = val(obj, key);
             }
 
-            if (typeof(val) === 'undefined') {
+            if (typeof (val) === 'undefined') {
                 val = '';
             }
 
@@ -112,9 +117,9 @@ const Util = {
             const item = list.shift();
             current = current[item];
         }
-        if (current && current.hasOwnProperty(lastKey)) {
+        if (current && Util.hasOwn(current, lastKey)) {
             const value = current[lastKey];
-            if (typeof(value) !== 'undefined') {
+            if (typeof (value) !== 'undefined') {
                 return value;
             }
         }
@@ -127,12 +132,12 @@ const Util = {
         }
 
         //fix time zone issue by use "/" replace "-"
-        const inputHandler = function(input) {
-            if (typeof(input) !== 'string') {
-                return input;
+        const inputHandler = function(it) {
+            if (typeof (it) !== 'string') {
+                return it;
             }
-            input = input.split('-').join('/');
-            return input;
+            it = it.split('-').join('/');
+            return it;
         };
 
         input = inputHandler(input);

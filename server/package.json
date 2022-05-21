@@ -1,0 +1,11 @@
+{
+    "name": "starfall-components-server",
+    "version": "1.0.0",
+    "description": "starfall-components server",
+    "license": "MIT",
+    "dependencies": {
+        "http-proxy-middleware": "^2.0.4",
+        "koa": "^2.13.4",
+        "koa-static-resolver": "^1.0.4"
+    }
+}

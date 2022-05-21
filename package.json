@@ -5,19 +5,26 @@
     "main": "",
     "scripts": {},
     "dependencies": {
-        "axios": "^0.25.0",
-        "vue": "^2.6.14"
+        "axios": "^0.27.2",
+        "github-markdown-css": "^5.1.0",
+        "lit": "^2.2.3",
+        "lodash": "^4.17.21",
+        "marked": "^4.0.15",
+        "qrcode": "^1.5.0",
+        "starfall-components-lit": "",
+        "uid": "^2.0.0",
+        "vue": "^3.2.34"
     },
     "devDependencies": {
-        "@vue/reactivity": "^3.2.29",
-        "eslint": "^8.7.0",
+        "eslint": "^8.15.0",
+        "eslint-config-plus": "^1.0.2",
         "eslint-plugin-chain": "^2.0.0",
         "eslint-plugin-html": "^6.2.0",
-        "eslint-plugin-sonarjs": "^0.11.0",
-        "eslint-plugin-vue": "^8.3.0",
-        "lit": "^2.1.2",
-        "stylelint": "^14.3.0",
-        "stylelint-config-recommended": "^6.0.0",
-        "stylelint-config-standard": "^24.0.0"
+        "eslint-plugin-sonarjs": "^0.13.0",
+        "eslint-plugin-vue": "^9.0.1",
+        "fps-detector": "^1.0.2",
+        "stylelint": "^14.8.2",
+        "stylelint-config-recommended": "^7.0.0",
+        "stylelint-config-standard": "^25.0.0"
     }
 }

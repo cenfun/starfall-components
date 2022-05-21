@@ -1,0 +1,10 @@
+{
+    "name": "starfall-components-vendor",
+    "version": "1.0.0",
+    "main": "dist/starfall-components-vendor.js",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {},
+    "devDependencies": {}
+}

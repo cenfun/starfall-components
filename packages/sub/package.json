@@ -7,7 +7,7 @@
     ],
     "dependencies": {
         "starfall-components-core": "",
-        "starfall-components-lit": ""
+        "vue": "^3.2.34"
     },
     "devDependencies": {}
 }

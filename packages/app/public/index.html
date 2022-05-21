@@ -5,12 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <link rel="icon" href="data:,">
-    <title>Preview starfall-components-lit</title>
+    <title>Preview starfall-components-app</title>
     <!--inject:start-->
-    <script src="../../../node_modules/axios/dist/axios.min.js"></script>
-    <script src="../../../node_modules/vue/dist/vue.min.js"></script>
+    <link href="../../../node_modules/starfall-components-vendor/dist/starfall-components-vendor.css" rel="stylesheet" />
+    <script src="../../../node_modules/starfall-components-vendor/dist/starfall-components-vendor.js"></script>
     <script src="../../../node_modules/starfall-components-core/dist/starfall-components-core.js"></script>
-    <script src="../dist/starfall-components-lit.js"></script>
+    <script src="../../../node_modules/vue/dist/vue.runtime.global.js"></script>
+    <link href="../../../node_modules/starfall-components-sub/dist/starfall-components-sub.css" rel="stylesheet" />
+    <script src="../../../node_modules/starfall-components-sub/dist/starfall-components-sub.js"></script>
+    <script src="../dist/starfall-components-app.js"></script>
     <!--inject:end-->
     <style>
         html,
@@ -54,23 +57,10 @@
 </head>
 
 <body>
-    <div class="preview-head">Preview starfall-components-lit:</div>
-    <div class="preview-body">
-        <div class="preview-container" contenteditable="true">
-            <h3>Header</h3>
-            <div>lit component
-                <lit-component style="display:block;background:gray;padding:10px;"></lit-component>
-            </div>
-            <div>lit child
-                <lit-child msg="child message:" style="display:block;background:gray;padding:10px;">child custom content</lit-child>
-            </div>
-            <div>Footer</div>
-        </div>
+    <div class="preview-head">Preview starfall-components-app:</div>
+    <div class="preview-body" contenteditable="true">
+        <div class="preview-container"></div>
     </div>
-    <script>
-        const LitComponents = window['starfall-components-lit'];
-        console.log(LitComponents);
-    </script>
 </body>
 
 </html>

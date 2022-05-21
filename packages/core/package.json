@@ -3,8 +3,7 @@
     "version": "1.0.0",
     "main": "dist/starfall-components-core.js",
     "dependencies": {
-        "axios": "^0.25.0",
-        "vue": "^2.6.14"
+        "starfall-components-vendor": ""
     },
     "files": [
         "dist"
