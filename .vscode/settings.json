@@ -1,4 +1,7 @@
 {
+    "[html]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
     "[javascript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
@@ -17,6 +20,11 @@
         "html",
         "javascript"
     ],
-    "less.validate": false,
-    "scss.validate": false
+    "scss.validate": false,
+    "stylelint.validate": [
+        "css",
+        "scss",
+        "vue",
+        "html"
+    ]
 }

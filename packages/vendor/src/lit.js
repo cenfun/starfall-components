@@ -21,7 +21,7 @@ export default {
     render,
     html,
     unsafeHTML,
-    
+
     css,
     unsafeCSS,
 

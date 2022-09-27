@@ -47,7 +47,7 @@ export default {
     }
 
     .starfall-components-sub-content {
-        padding: 10px 10px;
+        padding: 10px;
         color: red;
         font-size: 20px;
         font-weight: bold;
@@ -55,7 +55,7 @@ export default {
 
     .starfall-components-sub-action {
         button {
-            padding: 5px 5px;
+            padding: 5px;
         }
     }
 }
