@@ -1,7 +1,7 @@
 
 module.exports = {
-   
+
     build: {
-        cssExtract: false
+        //esModule: true,
     }
 };
