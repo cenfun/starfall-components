@@ -1,8 +1,13 @@
-
-import registerComponent from './util/register-component.js';
 import Util from './util/util.js';
+import {
+    createComponent,
+    destroyComponent,
+    getSlot
+} from './vue-base/vue-base.js';
 
 export {
-    registerComponent,
-    Util
+    Util,
+    createComponent,
+    destroyComponent,
+    getSlot
 };

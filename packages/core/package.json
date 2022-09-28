@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "main": "dist/starfall-components-core.js",
     "dependencies": {
-        "starfall-components-vendor": ""
+        "starfall-components-vendor": "",
+        "vue": "^3.2.39"
     },
     "files": [
         "dist"

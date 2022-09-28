@@ -36,6 +36,7 @@ module.exports = {
 
     'rules': {
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+        'vue/multi-word-component-names': 'off',
         'sonarjs/cognitive-complexity': 'off',
         'sonarjs/no-collapsible-if': 'off',
         'sonarjs/no-duplicate-string': 'off',

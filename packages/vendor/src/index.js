@@ -25,24 +25,12 @@ const lodash = {
     throttle
 };
 
-import vue from './vue.js';
 import lit from './lit.js';
-
 
 export {
     lit,
     lodash,
     marked,
-    vue,
-    qrcode,
-    uid
-};
-
-export default {
-    lit,
-    lodash,
-    marked,
-    vue,
     qrcode,
     uid
 };

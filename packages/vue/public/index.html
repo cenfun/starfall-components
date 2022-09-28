@@ -14,7 +14,13 @@
     <script src="../dist/starfall-components-vue.js"></script>
     <!--inject:end-->
     <script>
-        console.log(window['starfall-components-vue']);
+        const { createApp, App } = window['starfall-components-vue'];
+
+        const container = document.createElement('div');
+        document.body.appendChild(container);
+
+        const app = createApp(App);
+        app.mount(container);
     </script>
 </body>
 

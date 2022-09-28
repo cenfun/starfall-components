@@ -1,4 +1,4 @@
 import Component from './component.vue';
-import { registerComponent } from 'starfall-components-core';
-registerComponent(Component);
+import { createComponent } from 'starfall-components-core';
+Component.createComponent = createComponent.bind(Component);
 export default Component;

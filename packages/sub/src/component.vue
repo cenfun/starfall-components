@@ -8,35 +8,35 @@
     </div>
     <div class="starfall-components-sub-action">
       <button @click="increment">
-        increment+
+        increment +
       </button>
       <button @click="decrement">
-        decrement-
+        decrement -
       </button>
     </div>
-    <lit-component style="display: block; background: gray; padding: 10px; margin: 10px;" />
   </div>
 </template>
-<script>
-export default {
-    name: 'StarfallVueComponentsSub',
-    data() {
-        return {
-            value: 0,
-            name: 'starfall-components-sub'
-        };
-    },
-    methods: {
-        increment() {
-            this.value += 1;
-        },
-        decrement() {
-            this.value -= 1;
-        }
-    }
+
+<script setup>
+import { onMounted, ref } from 'vue';
+
+const name = 'Sub Vue Component';
+const value = ref(0);
+
+const increment = () => {
+    value.value += 1;
 };
+const decrement = () => {
+    value.value -= 1;
+};
+
+onMounted(() => {
+    value.value = 3;
+});
+
 </script>
-<style scoped lang="scss">
+
+<style lang="scss">
 .starfall-components-sub {
     width: 300px;
     margin: auto;
@@ -56,6 +56,7 @@ export default {
     .starfall-components-sub-action {
         button {
             padding: 5px;
+            margin: 5px;
         }
     }
 }
