@@ -32,7 +32,7 @@ export const createComponent = function(props, slots, container) {
     //  children?: Children | Slot | Slots
     // ): VNode
 
-    //container state
+    // container state
     const hasContainer = Boolean(container);
 
     let instance;
@@ -43,7 +43,7 @@ export const createComponent = function(props, slots, container) {
 
     const app = createApp({
         setup() {
-            //async
+            // async
             if (hasContainer) {
                 return instanceRender;
             }
@@ -61,7 +61,7 @@ export const createComponent = function(props, slots, container) {
 
     const component = app.mount(container);
 
-    //custom unmount for component
+    // custom unmount for component
     component.unmount = () => {
         app.unmount();
         if (portalContainer) {
@@ -70,10 +70,10 @@ export const createComponent = function(props, slots, container) {
         }
     };
 
-    //component.$el is componentContainer.firstChild
-    //console.log(component.$el, componentContainer.firstChild);
+    // component.$el is componentContainer.firstChild
+    // console.log(component.$el, componentContainer.firstChild);
 
-    //console.log(instance.el);
+    // console.log(instance.el);
 
     componentMap.set(instance.el, component);
 
@@ -82,6 +82,7 @@ export const createComponent = function(props, slots, container) {
 };
 
 export const getSlot = function(name) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const slots = useSlots();
     const fun = slots[name || 'default'];
     if (typeof fun === 'function') {

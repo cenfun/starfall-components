@@ -131,7 +131,7 @@ const Util = {
             return input;
         }
 
-        //fix time zone issue by use "/" replace "-"
+        // fix time zone issue by use "/" replace "-"
         const inputHandler = function(it) {
             if (typeof (it) !== 'string') {
                 return it;
@@ -155,7 +155,7 @@ const Util = {
         if (!date || !(date instanceof Date)) {
             return false;
         }
-        //is Date Object but Date {Invalid Date}
+        // is Date Object but Date {Invalid Date}
         if (isNaN(date.getTime())) {
             return false;
         }

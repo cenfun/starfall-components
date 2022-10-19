@@ -4,7 +4,7 @@
     "main": "dist/starfall-components-core.js",
     "dependencies": {
         "starfall-components-vendor": "",
-        "vue": "^3.2.39"
+        "vue": "^3.2.41"
     },
     "files": [
         "dist"
