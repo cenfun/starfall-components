@@ -49,14 +49,14 @@ onMounted(() => {
     .starfall-components-sub-content {
         padding: 10px;
         color: red;
-        font-size: 20px;
         font-weight: bold;
+        font-size: 20px;
     }
 
     .starfall-components-sub-action {
         button {
-            padding: 5px;
             margin: 5px;
+            padding: 5px;
         }
     }
 }
